@@ -223,9 +223,9 @@
             <label for="chk-mfa" class="flex items-start gap-3.5 p-4 rounded-2xl glass-subtle hover:border-indigo-500/40 cursor-pointer transition select-none">
               <input id="chk-mfa" type="checkbox" class="mt-1 w-5 h-5 rounded border-slate-600 text-indigo-500 focus:ring-indigo-500 bg-slate-900" />
               <div class="text-sm">
-                <div class="font-bold text-white">3. Save your Password &amp; optional 2FA / Passkey</div>
+                <div class="font-bold text-white">3. Save your Password &amp; required 2FA Passkey</div>
                 <p class="text-slate-300 mt-1 leading-relaxed">
-                  Save your credentials in your password manager. You can also add an authenticator app (TOTP) or device Passkey inside <a href="https://docs.goauthentik.io/install-config/first-steps/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Authentik's User Settings</a>.
+                  Save your credentials and Passkey inside your password manager.
                 </p>
               </div>
             </label>
@@ -635,10 +635,10 @@
     (function () {
       // Default Server Configuration (can be overridden by URL params or Admin Configurator)
       const defaultConfig = {
-        portalTitle: 'Home Media Portal',
+        portalTitle: 'Media Portal',
         authUrl: 'https://auth.yourdomain.com',
         flowSlug: 'default-enrollment-flow',
-        jellyfinUrl: 'https://jellyfin.yourdomain.com',
+        jellyfinUrl: 'https://tv.yourdomain.com',
         absUrl: 'https://audiobookshelf.yourdomain.com'
       };
 
