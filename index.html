@@ -195,15 +195,15 @@
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-6">
           <!-- Checklist Column -->
           <div class="lg:col-span-7 space-y-3.5">
-            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Before You Click Launch (Tap to Check Off)</h3>
+            <h3 class="text-sm font-semibold uppercase tracking-wider text-slate-400">Things to note (Tap to Check Off)</h3>
 
             <!-- Check 1 -->
             <label for="chk-username" class="flex items-start gap-3.5 p-4 rounded-2xl glass-subtle hover:border-indigo-500/40 cursor-pointer transition select-none">
               <input id="chk-username" type="checkbox" class="mt-1 w-5 h-5 rounded border-slate-600 text-indigo-500 focus:ring-indigo-500 bg-slate-900" />
               <div class="text-sm">
-                <div class="font-bold text-white">1. Pick a simple, memorable Username (not just email)</div>
+                <div class="font-bold text-white">1. Pick a simple, memorable username (not your email)</div>
                 <p class="text-slate-300 mt-1 leading-relaxed">
-                  Write down your exact <strong class="text-indigo-300">username</strong> (e.g. <code class="px-1.5 py-0.5 rounded bg-slate-800 text-indigo-300">alex</code>). While web browsers use one-click SSO, <a href="https://integrations.goauthentik.io/media/jellyfin/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Jellyfin TV &amp; mobile apps</a> sign in with your Authentik <strong>username</strong> and password (email login is not supported on LDAP TV login).
+                  This will be your account name in jellyfin. (e.g. jsmith). Web browsers use one-click SSO with passkeys, Jellyfin uses quick connect to sign in.
                 </p>
               </div>
             </label>
@@ -214,7 +214,7 @@
               <div class="text-sm">
                 <div class="font-bold text-white">2. Verify your Email Address if prompted</div>
                 <p class="text-slate-300 mt-1 leading-relaxed">
-                  <a href="https://www.audiobookshelf.org/docs/documentation/server-management/oidc-authentication/" target="_blank" rel="noopener noreferrer" class="text-indigo-400 hover:underline">Audiobookshelf OpenID Connect</a> checks that your Authentik email is verified. Completing email verification prevents <code class="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300">Unauthorized</code> errors on first login.
+                   Some apps check that your Authentik email is verified. Completing email verification (if prompted) prevents <code class="px-1.5 py-0.5 rounded bg-slate-800 text-amber-300">Unauthorized</code> errors on first login. Dont worry if your not prompted.
                 </p>
               </div>
             </label>
@@ -223,9 +223,9 @@
             <label for="chk-mfa" class="flex items-start gap-3.5 p-4 rounded-2xl glass-subtle hover:border-indigo-500/40 cursor-pointer transition select-none">
               <input id="chk-mfa" type="checkbox" class="mt-1 w-5 h-5 rounded border-slate-600 text-indigo-500 focus:ring-indigo-500 bg-slate-900" />
               <div class="text-sm">
-                <div class="font-bold text-white">3. Save your Password &amp; required 2FA Passkey</div> 
+                <div class="font-bold text-white">3. Have your password manager ready</div> 
                 <p class="text-slate-300 mt-1 leading-relaxed">
-                  Save your credentials and Passkey inside your password manager.
+                  During the process you will be required to setup a 2FA Passkey. Youll need a password manager to save your credentials and Passkey for future logins.
                 </p>
               </div>
             </label>
@@ -240,7 +240,7 @@
               </div>
               <h3 class="text-xl font-bold text-white">Ready to set up your account?</h3>
               <p class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                If you received an <strong>Invitation Link</strong> via email or text, paste it below (or leave blank to use the server's default enrollment flow). We automatically attach a <code class="text-indigo-300">?next=</code> return link so Authentik brings you right back here when finished.
+                If you received an <strong>Invitation Link</strong> via email or text, paste it below, otherwise leave it blank.
               </p>
 
               <!-- Optional Invite Link / Token Input -->
@@ -347,7 +347,7 @@
               <div class="absolute bottom-4 left-5 right-5 flex items-end justify-between gap-2">
                 <div>
                   <span class="px-2.5 py-1 rounded-full bg-purple-500/25 border border-purple-400/40 text-purple-200 text-[11px] font-semibold uppercase tracking-wider">
-                    Movies • TV Shows • Live Streams
+                    Movies • TV Shows
                   </span>
                   <h3 class="text-2xl font-extrabold text-white mt-1.5">
                     <a href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer" class="hover:text-purple-300 transition">Jellyfin Media Server</a>
@@ -358,7 +358,7 @@
 
             <div class="p-6 space-y-5">
               <p class="text-sm text-slate-300 leading-relaxed">
-                <a href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline font-medium">Jellyfin</a> is our private streaming service for movies, TV series, and home cinema. It tracks your watch progress across devices, supports 4K HDR direct play, subtitles, and offline downloads with zero ads.
+                <a href="https://jellyfin.org/" target="_blank" rel="noopener noreferrer" class="text-purple-400 hover:underline font-medium">Jellyfin</a> is our private streaming service for movies, TV series, and home cinema. It supports 4K HDR direct play, subtitles, and offline downloads with zero ads.
               </p>
 
               <!-- Copyable Server Address -->
@@ -383,18 +383,18 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
                   <div class="p-3.5 rounded-2xl glass-subtle space-y-1.5">
                     <div class="font-bold text-purple-300 flex items-center gap-1.5">
-                      <span>🌐 On Web Browsers</span>
+                      <span>🌐 On Web Browsers &amp; Mobile App</span>
                     </div>
                     <p class="text-slate-300 leading-relaxed">
-                      Open the Jellyfin Web URL and click <strong>"Sign in with Authentik / SSO"</strong> for instant login, or sign in with your Authentik <strong>username</strong> and password.
+                      Open the Jellyfin Web URL and click <strong>"Sign in with SSO (Authentik)"</strong>.
                     </p>
                   </div>
                   <div class="p-3.5 rounded-2xl glass-subtle space-y-1.5">
                     <div class="font-bold text-purple-300 flex items-center gap-1.5">
-                      <span>📺 On Smart TVs &amp; Mobile Apps</span>
+                      <span>📺 On Smart TVs</span>
                     </div>
                     <p class="text-slate-300 leading-relaxed">
-                      Enter the Server URL above, then sign in using your Authentik <strong>Username</strong> + Password (via <a href="https://integrations.goauthentik.io/media/jellyfin/" target="_blank" rel="noopener noreferrer" class="text-purple-400 underline">Authentik LDAP</a>) or tap <strong>Quick Connect</strong> on your TV and approve the 6-digit code from your phone!
+                      Enter the Server URL above, then tap <strong>Quick Connect</strong> on your TV. On an already logged-in device (like your phone or PC), go to Settings > Quick Connect. Enter the 6-character code from the new device and confirm to log in automatically.   
                     </p>
                   </div>
                 </div>
@@ -491,6 +491,7 @@
           <span class="text-xs font-bold uppercase tracking-widest text-amber-400">Step 3 • Client Applications</span>
           <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Get the Apps for Your Devices</h2>
           <p class="text-sm text-slate-300 mt-1">
+            Here are some of the available streaming apps, Its recommended to use the official apps where they are available. <br>
             Filter by your device platform or media service below. Every official client is free with no subscription required.
           </p>
         </div>
@@ -674,7 +675,7 @@
           description: 'Fast, native Swift video player built specifically for iOS and Apple TV 4K.',
           url: 'https://apps.apple.com/us/app/swiftfin/id1604098728',
           storeText: 'Apple App Store',
-          loginHint: 'Supports Quick Connect and direct Authentik username/password login.'
+          loginHint: 'Supports Quick Connect login.'
         },
         {
           id: 'jf-android-mobile',
@@ -687,7 +688,7 @@
           description: 'Official Android companion app with Chromecast support, offline downloads, and background audio.',
           url: 'https://play.google.com/store/apps/details?id=org.jellyfin.mobile',
           storeText: 'Google Play Store',
-          loginHint: 'Enter Jellyfin Server URL → Sign in with Authentik Username & Password or Quick Connect.'
+          loginHint: 'Enter Jellyfin Server URL → Sign in with Quick Connect.'
         },
         {
           id: 'jf-android-tv',
